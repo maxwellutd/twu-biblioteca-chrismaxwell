@@ -11,6 +11,7 @@ public class TestingBibliotecaApp {
 
     @Test
     public void testWelcomeMessage() {
-        assertEquals("Welcome to Bangalore Public Library", BibliotecaApp.WelcomeMessage());
+        assertEquals(true,BibliotecaApp.hasWelcomeMsg());
+
     }
 }
