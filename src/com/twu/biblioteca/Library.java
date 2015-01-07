@@ -32,8 +32,12 @@ public class Library {
 
     public static void listAllBooks() {
         for(int i = 0; i < lib.size(); i++) {
-            System.out.println(displayBookInfo(i));
+            System.out.println((i+1) + ". " + displayBookInfo(i));
         }
+    }
+
+    public int getLibSize(){
+        return lib.size();
     }
 
     public void checkOutBook(int i) {
