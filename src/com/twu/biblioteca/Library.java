@@ -21,4 +21,14 @@ public class Library {
     public Book getFirstBook(){
         return lib.get(0);
     }
+
+    public Book getBookAt(int x){
+        return lib.get(x);
+    }
+
+    public static void listAllBooks() {
+        for(int i=0;i<lib.size();i++){
+            System.out.println(lib.get(i).getTitle() + " - " + lib.get(i).getAuthor());
+        }
+    }
 }

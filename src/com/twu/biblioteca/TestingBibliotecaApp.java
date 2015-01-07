@@ -38,6 +38,11 @@ public class TestingBibliotecaApp{
 
     @Test
     public void testLibraryList(){
-
+        assertEquals(mockLib.getBookAt(0),one);
+        assertEquals(mockLib.getBookAt(1),two);
+        assertEquals(mockLib.getBookAt(2),three);
+        assertEquals(mockLib.getBookAt(3),four);
     }
+
+
 }
