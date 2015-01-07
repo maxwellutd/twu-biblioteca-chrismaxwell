@@ -18,4 +18,7 @@ public class Library {
         lib.add(b);
     }
 
+    public Book getFirstBook(){
+        return lib.get(0);
+    }
 }
