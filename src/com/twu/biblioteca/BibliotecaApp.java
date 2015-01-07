@@ -25,11 +25,12 @@ public class BibliotecaApp{
         Scanner choose = new Scanner(System.in);
         String choice = null;
 
-        while(!"3".equals(choice)){
+        while(!"4".equals(choice)){
             System.out.println("Please enter the number of the selection from the menu below");
             System.out.println("1. List All Books");
             System.out.println("2. Check Out Book");
-            System.out.println("3. Quit");
+            System.out.println("3. Return Book");
+            System.out.println("4. Quit");
             choice = choose.nextLine();
             if("1".equals(choice)){
                 listAllBooks();
@@ -38,11 +39,25 @@ public class BibliotecaApp{
                 checkOut();
             }
             else if("3".equals(choice)){
-                //quit
+                returnBook();
             }
             else{
                 System.out.println("Select a valid option");
             }
+        }
+
+    }
+
+    private static void returnBook() {
+        Scanner input = new Scanner(System.in);
+        String title = null;
+        System.out.println("Please type the title of the book you are returning (case sensitive)");
+        title = input.nextLine();
+        if(library.returnBook(title)){
+            System.out.println("Thank you for returning the book");
+        }
+        else{
+            System.out.println("That is not a valid book to return");
         }
 
     }

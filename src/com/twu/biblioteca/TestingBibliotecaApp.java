@@ -10,8 +10,8 @@ public class TestingBibliotecaApp{
     private static Library mockLib;
     private static Book one,two,three,four;
 
-    @BeforeClass
-    public static void setUp() {
+    @Before
+    public void setUp() {
 
         mockLib = new Library();
         one = new Book("FIRST BOOK", "Andrew A", 1999);
@@ -23,6 +23,7 @@ public class TestingBibliotecaApp{
         mockLib.addBook(three);
         mockLib.addBook(four);
     }
+
 
     @Test
     public void testBookExists(){
@@ -57,5 +58,13 @@ public class TestingBibliotecaApp{
         assertEquals(mockLib.getBookAt(2),four);
     }
 
-
+    @Test
+    public void testReturnBook(){
+        mockLib.checkOutBook(2);
+        assertEquals(3,mockLib.getLibSize());
+        mockLib.returnBook("THIRD BOOK");
+        assertEquals(4, mockLib.getLibSize());
+        mockLib.returnBook("FAKE BOOK");
+        assertEquals(4,mockLib.getLibSize());//library size shouldn't increase if incorrect book being returned.
+    }
 }

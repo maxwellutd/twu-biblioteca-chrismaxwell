@@ -8,9 +8,11 @@ import java.util.ArrayList;
 public class Library {
 
     private static ArrayList<Book> lib;
+    private static ArrayList<Book> borrowedList;
 
     Library(){
         lib = new ArrayList<Book>();
+        borrowedList = new ArrayList<Book>();
     }
 
 
@@ -41,6 +43,17 @@ public class Library {
     }
 
     public void checkOutBook(int i) {
-        lib.remove(i);
+        borrowedList.add(lib.remove(i));
+    }
+
+    public Boolean returnBook(String s) {
+
+        for(int i=0; i < borrowedList.size(); i++){
+            if(borrowedList.get(i).getTitle().equals(s)){
+                lib.add(borrowedList.remove(i));
+                return true;
+            }
+        }
+        return false;
     }
 }

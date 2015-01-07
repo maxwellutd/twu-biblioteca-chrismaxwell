@@ -33,11 +33,11 @@
       <file leaf-file-name="BibliotecaApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7844156" vertical-offset="613" max-vertical-offset="1260">
-              <caret line="61" column="60" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.25454545" vertical-offset="697" max-vertical-offset="1485">
+              <caret line="53" column="99" selection-start-line="53" selection-start-column="99" selection-end-line="53" selection-end-column="99" />
               <folding>
-                <element signature="e#2044#2045#0" expanded="true" />
-                <element signature="e#2082#2083#0" expanded="true" />
+                <element signature="e#2570#2571#0" expanded="true" />
+                <element signature="e#2608#2609#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,15 +46,16 @@
       <file leaf-file-name="Library.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="690">
-              <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="410" max-vertical-offset="870">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
-                <element signature="e#392#393#0" expanded="true" />
-                <element signature="e#425#426#0" expanded="true" />
-                <element signature="e#813#814#0" expanded="true" />
-                <element signature="e#846#847#0" expanded="true" />
-                <element signature="e#885#886#0" expanded="true" />
-                <element signature="e#914#915#0" expanded="true" />
+                <element signature="method#Library#0;class#Library#0" expanded="false" />
+                <element signature="e#487#488#0" expanded="true" />
+                <element signature="e#520#521#0" expanded="true" />
+                <element signature="e#908#909#0" expanded="true" />
+                <element signature="e#941#942#0" expanded="true" />
+                <element signature="e#980#981#0" expanded="true" />
+                <element signature="e#1027#1028#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,12 +74,12 @@
       <file leaf-file-name="TestingBibliotecaApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/TestingBibliotecaApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="590" max-vertical-offset="1005">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="755" max-vertical-offset="1140">
+              <caret line="67" column="112" selection-start-line="67" selection-start-column="112" selection-end-line="67" selection-end-column="112" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
-                <element signature="e#984#985#0" expanded="true" />
+                <element signature="e#916#917#0" expanded="true" />
+                <element signature="e#973#974#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,8 +96,8 @@
         <option value="$PROJECT_DIR$/test/TestingBibliotecaApp.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/TestingBibliotecaApp.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/TestingBibliotecaApp.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/TestingBibliotecaApp.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
       </list>
     </option>
@@ -531,7 +532,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420644104118</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="testing it in intellij&#10;">
+      <created>1420645631978</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1420645631978</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -588,7 +595,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java</url>
-          <line>17</line>
+          <line>19</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -607,8 +614,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="420">
           <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
           <folding>
-            <element signature="e#2044#2045#0" expanded="true" />
-            <element signature="e#2082#2083#0" expanded="true" />
+            <element signature="e#2570#2571#0" expanded="true" />
+            <element signature="e#2608#2609#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -618,12 +625,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="360">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
+            <element signature="method#Library#0;class#Library#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -642,8 +650,8 @@
           <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -653,8 +661,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2044#2045#0" expanded="true" />
-            <element signature="e#2082#2083#0" expanded="true" />
+            <element signature="e#2570#2571#0" expanded="true" />
+            <element signature="e#2608#2609#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -664,12 +672,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="450">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
+            <element signature="method#Library#0;class#Library#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -688,8 +697,8 @@
           <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -699,8 +708,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="270">
           <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
           <folding>
-            <element signature="e#2044#2045#0" expanded="true" />
-            <element signature="e#2082#2083#0" expanded="true" />
+            <element signature="e#2570#2571#0" expanded="true" />
+            <element signature="e#2608#2609#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -709,18 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3573487" vertical-offset="2111" max-vertical-offset="5010">
           <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/TestingBibliotecaApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="590" max-vertical-offset="1005">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#984#985#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -734,26 +731,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="690">
-          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="410" max-vertical-offset="870">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
+            <element signature="method#Library#0;class#Library#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/TestingBibliotecaApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="755" max-vertical-offset="1140">
+          <caret line="67" column="112" selection-start-line="67" selection-start-column="112" selection-end-line="67" selection-end-column="112" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7844156" vertical-offset="613" max-vertical-offset="1260">
-          <caret line="61" column="60" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.25454545" vertical-offset="697" max-vertical-offset="1485">
+          <caret line="53" column="99" selection-start-line="53" selection-start-column="99" selection-end-line="53" selection-end-column="99" />
           <folding>
-            <element signature="e#2044#2045#0" expanded="true" />
-            <element signature="e#2082#2083#0" expanded="true" />
+            <element signature="e#2570#2571#0" expanded="true" />
+            <element signature="e#2608#2609#0" expanded="true" />
           </folding>
         </state>
       </provider>
