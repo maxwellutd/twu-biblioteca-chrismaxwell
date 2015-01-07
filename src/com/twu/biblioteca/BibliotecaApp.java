@@ -10,10 +10,10 @@ public class BibliotecaApp{
     public static void initMockData() {
 
         mockLib = new Library();
-        one = new Book("FIRST BOOK", "Andrew A");
-        two = new Book("SECOND BOOK", "Bob B");
-        three = new Book ("THIRD BOOK", "Chris C");
-        four = new Book ("FOURTH BOOK", "Daniel D");
+        one = new Book("FIRST BOOK", "Andrew A", 1999);
+        two = new Book("SECOND BOOK", "Bob B", 2005);
+        three = new Book ("THIRD BOOK", "Chris C", 1977);
+        four = new Book ("FOURTH BOOK", "Daniel D", 2000);
         mockLib.addBook(one);
         mockLib.addBook(two);
         mockLib.addBook(three);
