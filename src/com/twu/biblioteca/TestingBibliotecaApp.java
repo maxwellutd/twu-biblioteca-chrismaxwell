@@ -50,5 +50,10 @@ public class TestingBibliotecaApp{
         assertEquals(mockLib.displayBookInfo(0),display);
     }
 
-
+    @Test
+    public void testCheckOutBook(){
+        assertEquals(mockLib.getBookAt(2),three);
+        mockLib.checkOutBook(2);
+        assertEquals(mockLib.getBookAt(2),four);
+    }
 }

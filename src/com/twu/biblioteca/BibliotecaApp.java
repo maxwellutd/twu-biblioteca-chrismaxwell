@@ -32,6 +32,12 @@ public class BibliotecaApp{
             if("1".equals(choice)){
                 listAllBooks();
             }
+            if("2".equals(choice)){
+                //quit
+            }
+            else{
+                System.out.println("Select a valid option");
+            }
         }
 
     }

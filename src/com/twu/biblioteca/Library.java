@@ -35,4 +35,8 @@ public class Library {
             System.out.println(displayBookInfo(i));
         }
     }
+
+    public void checkOutBook(int i) {
+        lib.remove(i);
+    }
 }
