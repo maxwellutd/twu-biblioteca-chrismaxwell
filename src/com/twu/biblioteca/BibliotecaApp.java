@@ -1,5 +1,7 @@
 package com.twu.biblioteca;
 
+import java.util.*;
+
 public class BibliotecaApp{
 
     private static Library mockLib;
@@ -19,7 +21,19 @@ public class BibliotecaApp{
     }
 
     public static void beginConsoleApp(){
-        listAllBooks();
+        Scanner choose = new Scanner(System.in);
+        String choice = null;
+
+        while(!"2".equals(choice)){
+            System.out.println("Please enter the number of the selection from the menu below");
+            System.out.println("1. List All Books");
+            System.out.println("2. Quit");
+            choice = choose.nextLine();
+            if("1".equals(choice)){
+                listAllBooks();
+            }
+        }
+
     }
 
     private static void listAllBooks() {
