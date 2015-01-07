@@ -14,7 +14,7 @@ public class TestingBibliotecaApp{
     public static void setUp() {
 
         mockLib = new Library();
-        one = new Book("FIRST BOOK", "Andrew A");
+        one = new Book("FIRST BOOK", "Andrew A", 1999);
         two = new Book("SECOND BOOK", "Bob B");
         three = new Book ("THIRD BOOK", "Chris C");
         four = new Book ("FOURTH BOOK", "Daniel D");
@@ -42,6 +42,12 @@ public class TestingBibliotecaApp{
         assertEquals(mockLib.getBookAt(1),two);
         assertEquals(mockLib.getBookAt(2),three);
         assertEquals(mockLib.getBookAt(3),four);
+    }
+
+    @Test
+    public void testBookShowsAllInfo(){
+        String display = "FIRST BOOK - Andrew A - 1999";
+        assertEquals(mockLib.displayBookInfo(0),display);
     }
 
 

@@ -26,9 +26,13 @@ public class Library {
         return lib.get(x);
     }
 
+    public static String displayBookInfo(int position){
+        return (lib.get(position).getTitle() + " - " + lib.get(position).getAuthor() + " - " + lib.get(position).getYear());
+    }
+
     public static void listAllBooks() {
-        for(int i=0;i<lib.size();i++){
-            System.out.println(lib.get(i).getTitle() + " - " + lib.get(i).getAuthor());
+        for(int i = 0; i < lib.size(); i++) {
+            System.out.println(displayBookInfo(i));
         }
     }
 }
