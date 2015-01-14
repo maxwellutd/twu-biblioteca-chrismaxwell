@@ -4,8 +4,8 @@ import java.util.*;
 
 public class BibliotecaApp{
 
-    private final Library mockLib, library;
-    private final Book one,two,three,four; //all mock books to create mock library
+    private Library mockLib, library;
+    private Book one,two,three,four; //all mock books to create mock library
 
     public void initMockData() {
 
