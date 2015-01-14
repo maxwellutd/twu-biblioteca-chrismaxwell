@@ -10,16 +10,22 @@ public class Library {
 
     private List<Book> lib;
     private List<Book> borrowedList;
+    private List<Movie> movieLib;
+    private List<Movie> borrowedMovieList;
 
     public Library(){
         this.lib = new ArrayList<Book>();
+        this.movieLib = new ArrayList<Movie>();
         this.borrowedList = new ArrayList<Book>();
+        this.borrowedMovieList = new ArrayList<Movie>();
     }
 
 
-    public void addBook(Book b){
-        this.lib.add(b);
+    public void addBook(Book book){
+        this.lib.add(book);
     }
+
+    public void addMovie(Movie )
 
     public Book getFirstBook(){
         return lib.get(0);
@@ -51,5 +57,9 @@ public class Library {
             }
         }
         return false;
+    }
+
+    public Boolean hasMovie(Movie movie){
+
     }
 }
