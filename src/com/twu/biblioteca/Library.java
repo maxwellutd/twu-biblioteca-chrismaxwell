@@ -29,9 +29,6 @@ public class Library {
         return lib.get(bookPos);
     }
 
-    public String getBookInfo(int position){
-        return (lib.get(position).getTitle() + " - " + lib.get(position).getAuthor() + " - " + lib.get(position).getYear());
-    }
 
     public List<Book> getListOfBooks() {
         return lib;

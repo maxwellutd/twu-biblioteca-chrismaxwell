@@ -86,7 +86,7 @@ public class BibliotecaApp{
         bookList = library.getListOfBooks();
 
         for(int i =0; i<bookList.size(); i++){
-            System.out.println((i+1) + ". " + bookList.get(i).getTitle() + " - " + bookList.get(i).getAuthor() + " - " + bookList.get(i).getYear());
+            System.out.println((i+1) + ". " + bookList.get(i).getBookInfo());
         }
     }
 
