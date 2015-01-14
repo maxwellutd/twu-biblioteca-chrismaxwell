@@ -4,10 +4,10 @@ import java.util.*;
 
 public class BibliotecaApp{
 
-    private static Library mockLib, library;
-    private static Book one,two,three,four;
+    private final Library mockLib, library;
+    private final Book one,two,three,four; //all mock books to create mock library
 
-    public static void initMockData() {
+    public void initMockData() {
 
         mockLib = new Library();
         one = new Book("FIRST BOOK", "Andrew A", 1999);
@@ -21,7 +21,7 @@ public class BibliotecaApp{
         library = mockLib;
     }
 
-    public static void beginConsoleApp(){
+    public void beginConsoleApp(){
         Scanner choose = new Scanner(System.in);
         String choice = null;
 
@@ -33,13 +33,16 @@ public class BibliotecaApp{
             System.out.println("4. Quit");
             choice = choose.nextLine();
             if("1".equals(choice)){
-                listAllBooks();
+                displayAllBooks();
             }
             else if("2".equals(choice)){
                 checkOut();
             }
             else if("3".equals(choice)){
                 returnBook();
+            }
+            else if("4".equals(choice)){
+                break; //quitting
             }
             else{
                 System.out.println("Select a valid option");
@@ -48,7 +51,7 @@ public class BibliotecaApp{
 
     }
 
-    private static void returnBook() {
+    private void returnBook() {
         Scanner input = new Scanner(System.in);
         String title = null;
         System.out.println("Please type the title of the book you are returning (case sensitive)");
@@ -62,11 +65,11 @@ public class BibliotecaApp{
 
     }
 
-    private static void checkOut() {
+    private void checkOut() {
         Scanner choose = new Scanner(System.in);
         String choice = null;
         System.out.println("Please select a book to check out by entering the corresponding number");
-        listAllBooks();
+        displayAllBooks();
         choice = choose.nextLine();
         int selection = Integer.parseInt(choice);
         if(selection < 1 || selection > library.getLibSize()){
@@ -78,15 +81,22 @@ public class BibliotecaApp{
         }
     }
 
-    private static void listAllBooks() {
-        Library.listAllBooks();
+    private void displayAllBooks() {
+        List<Book> bookList = new ArrayList<Book>();
+        bookList = library.getListOfBooks();
+
+        for(int i =0; i<bookList.size(); i++){
+            System.out.println((i+1) + ". " + bookList.get(i).getTitle() + " - " + bookList.get(i).getAuthor() + " - " + bookList.get(i).getYear());
+        }
     }
 
     public static void main(String[] args) {
 
         System.out.println("Welcome to Bangalore Public Library");
-        initMockData();
-        beginConsoleApp();
+        BibliotecaApp start = new BibliotecaApp();
+        start.initMockData();
+        start.beginConsoleApp();
+
     }
 
 

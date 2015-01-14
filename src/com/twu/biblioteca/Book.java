@@ -5,9 +5,9 @@ package com.twu.biblioteca;
  */
 public class Book {
 
-    private String title;
-    private String author;
-    private int year;
+    private final String title;
+    private final String author;
+    private final int year;
 
     Book(){
         title = "";
@@ -15,10 +15,10 @@ public class Book {
         year = 0;
     }
 
-    Book(String t, String a, int y){
-        title = t;
-        author = a;
-        year = y;
+    Book(String title, String author, int year){
+        this.title = title;
+        this.author = author;
+        this.year = year;
     }
 
     public String getTitle(){

@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import java.util.List;
 import java.util.ArrayList;
 
 /**
@@ -7,49 +8,47 @@ import java.util.ArrayList;
  */
 public class Library {
 
-    private static ArrayList<Book> lib;
-    private static ArrayList<Book> borrowedList;
+    private List<Book> lib;
+    private List<Book> borrowedList;
 
-    Library(){
-        lib = new ArrayList<Book>();
-        borrowedList = new ArrayList<Book>();
+    public Library(){
+        this.lib = new ArrayList<Book>();
+        this.borrowedList = new ArrayList<Book>();
     }
 
 
-    public static void addBook(Book b){
-        lib.add(b);
+    public void addBook(Book b){
+        this.lib.add(b);
     }
 
     public Book getFirstBook(){
         return lib.get(0);
     }
 
-    public Book getBookAt(int x){
-        return lib.get(x);
+    public Book getBookAt(int bookPos){
+        return lib.get(bookPos);
     }
 
-    public static String displayBookInfo(int position){
+    public String getBookInfo(int position){
         return (lib.get(position).getTitle() + " - " + lib.get(position).getAuthor() + " - " + lib.get(position).getYear());
     }
 
-    public static void listAllBooks() {
-        for(int i = 0; i < lib.size(); i++) {
-            System.out.println((i+1) + ". " + displayBookInfo(i));
-        }
+    public List<Book> getListOfBooks() {
+        return lib;
     }
 
     public int getLibSize(){
         return lib.size();
     }
 
-    public void checkOutBook(int i) {
-        borrowedList.add(lib.remove(i));
+    public void checkOutBook(int position) {
+        borrowedList.add(lib.remove(position));
     }
 
-    public Boolean returnBook(String s) {
+    public Boolean returnBook(String title) {
 
         for(int i=0; i < borrowedList.size(); i++){
-            if(borrowedList.get(i).getTitle().equals(s)){
+            if(borrowedList.get(i).getTitle().equals(title)){
                 lib.add(borrowedList.remove(i));
                 return true;
             }
