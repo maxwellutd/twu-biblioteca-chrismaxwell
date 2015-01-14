@@ -15,12 +15,7 @@ public class Book {
         year = 0;
     }
 
-    public Book(String t, String a){
-        title = t;
-        author = a;
-    }
-
-    public Book(String t, String a, int y){
+    Book(String t, String a, int y){
         title = t;
         author = a;
         year = y;
