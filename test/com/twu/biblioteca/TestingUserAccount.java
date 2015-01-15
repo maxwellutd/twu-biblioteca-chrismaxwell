@@ -44,6 +44,20 @@ public class TestingUserAccount {
         assertFalse(accounts.hasUser(two.getLoginDetails()));
     }
 
+    @Test
+    public void testUserInfoMatchesLogin(){
+
+        assertEquals("Bob",accounts.getUser(one.getLoginDetails()).getName());
+        assertEquals("123-4567", one.getLoginDetails().getLibNumber());
+    }
+
+    @Test
+    public void testPrintUserInfo(){
+        String expectedOutput = "Name: Bob, Email: bob@bob.com, Phone: 123456";
+
+        assertEquals(expectedOutput, one.getAllUserInfo());
+    }
+
 
 
 

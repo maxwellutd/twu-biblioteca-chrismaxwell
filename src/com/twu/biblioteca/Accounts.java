@@ -22,5 +22,9 @@ public class Accounts {
         return accounts.containsKey(login);
     }
 
+    public User getUser(Login login){
+        return accounts.get(login);
+    }
+
 
 }

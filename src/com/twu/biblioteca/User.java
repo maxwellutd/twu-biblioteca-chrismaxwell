@@ -31,6 +31,10 @@ public class User {
     }
 
     public Login getLoginDetails(){
-        return this.login;
+        return login;
+    }
+
+    public String getAllUserInfo(){
+        return ("Name: " + name + ", Email: " + email + ", Phone: " + phone);
     }
 }
