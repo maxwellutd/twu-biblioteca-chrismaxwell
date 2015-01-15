@@ -25,7 +25,9 @@ public class Library {
         this.lib.add(book);
     }
 
-    public void addMovie(Movie )
+    public void addMovie(Movie movie){
+        this.movieLib.add(movie);
+    }
 
     public Book getFirstBook(){
         return lib.get(0);
@@ -48,6 +50,10 @@ public class Library {
         borrowedList.add(lib.remove(position));
     }
 
+    public void checkOutMovie(int position) {
+        borrowedMovieList.add(movieLib.remove(position));
+    }
+
     public Boolean returnBook(String title) {
 
         for(int i=0; i < borrowedList.size(); i++){
@@ -59,7 +65,24 @@ public class Library {
         return false;
     }
 
-    public Boolean hasMovie(Movie movie){
-
+    public Boolean returnMovie(String title){
+        for(int index=0; index < borrowedMovieList.size(); index++){
+            if(borrowedMovieList.get(index).getMovieTitle().equals(title)){
+                movieLib.add(borrowedMovieList.remove(index));
+                return true;
+            }
+        }
+        return false;
     }
+
+    public Boolean hasMovie(Movie movie){
+        for(int index = 0; index < movieLib.size(); index ++){
+            if(movieLib.get(index).equals((movie))){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 }

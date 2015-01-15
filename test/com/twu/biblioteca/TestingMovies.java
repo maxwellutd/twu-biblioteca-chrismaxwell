@@ -22,8 +22,37 @@ public class TestingMovies {
         Library lib = new Library();
         Movie one = new Movie("Movie One", "2000", "Aaron A", 8);
         lib.addMovie(one);
+        assertTrue(lib.hasMovie(one));
+    }
+
+    @Test
+    public void testMovieCheckOut(){
+        Library lib = new Library();
+        Movie one = new Movie("Movie One", "2000", "Aaron A", 8);
+        lib.addMovie(one);
+        lib.checkOutMovie(0);
+
+        assertFalse(lib.hasMovie(one));
+    }
+
+    @Test
+    public void testReturnBook(){
+        Library lib = new Library();
+        Movie one = new Movie("Movie One", "2000", "Aaron A", 8);
+        lib.addMovie(one);
+        lib.checkOutMovie(0);
+        lib.returnMovie("Movie One");
 
         assertTrue(lib.hasMovie(one));
+
+    }
+
+    @Test
+    public void testReturnFail(){
+        Library lib = new Library();
+        Movie one = new Movie("Movie One", "2000", "Aaron A", 8);
+        lib.addMovie(one);
+        assertTrue(!lib.returnMovie("Movie One"));
     }
 
 }
