@@ -6,24 +6,38 @@ import java.util.HashMap;
  * Created by cmaxwell on 15/01/15.
  */
 public class Accounts {
+    private String username, password;
 
-    private HashMap<Login, User> accounts;
-
+    private HashMap<String, User> accounts;
+    private HashMap<String, String> login;
 
     Accounts(){
-        accounts = new HashMap<Login, User>();
+        accounts = new HashMap<String,User>();
+        login = new HashMap<String,String>();
     }
 
-    public final void addUser(Login login,User user){
-        accounts.put(login,user);
+    public void addLoginDetails(String username, String password){
+        login.put(username,password);
     }
 
-    public boolean hasUser(Login login){
-        return accounts.containsKey(login);
+    public final void addUser(String username,User userInfo){
+        accounts.put(username,userInfo);
     }
 
-    public User getUser(Login login){
-        return accounts.get(login);
+    public final boolean hasUser(String username){
+        return accounts.containsKey(username);
+    }
+
+    public final User getUser(String username){
+        return accounts.get(username);
+    }
+
+    public Boolean checkLoginSuccessful(String username, String password){
+        if(login.containsKey(username) && login.get(username).equals(password)){
+            return true;
+        }
+
+        return false;
     }
 
 

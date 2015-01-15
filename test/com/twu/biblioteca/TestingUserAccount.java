@@ -11,7 +11,7 @@ public class TestingUserAccount {
 
     private String name, email, phone, password, libNumber;
     private User one;
-    private Login login;
+
     private Accounts accounts;
 
     @Before
@@ -22,10 +22,9 @@ public class TestingUserAccount {
         password = "thoughtworks";
         libNumber = "123-4567";
         one = new User(name,email,phone);
-        login = new Login(libNumber,password);
-        one.addLoginDetails(login);
         accounts = new Accounts();
-        accounts.addUser(one.getLoginDetails(), one);
+        accounts.addLoginDetails(libNumber,password);
+        accounts.addUser(libNumber,one);
 
 
     }
@@ -39,24 +38,36 @@ public class TestingUserAccount {
 
     @Test
     public void testUserExists(){
-        User two = new User("Brad", "brad@brad.com", "54321");
-        assertTrue(accounts.hasUser(one.getLoginDetails()));
-        assertFalse(accounts.hasUser(two.getLoginDetails()));
+
+        assertTrue(accounts.hasUser(libNumber)); //test for existing user
+        assertFalse(accounts.hasUser("111-2222")); //test for non existing user
+
     }
 
     @Test
     public void testUserInfoMatchesLogin(){
 
-        assertEquals("Bob",accounts.getUser(one.getLoginDetails()).getName());
-        assertEquals("123-4567", one.getLoginDetails().getLibNumber());
+        assertEquals("Bob",accounts.getUser(libNumber).getName());
+        assertEquals("bob@bob.com", accounts.getUser(libNumber).getEmail());
+        assertEquals("123456", accounts.getUser(libNumber).getPhone());
     }
 
     @Test
     public void testPrintUserInfo(){
         String expectedOutput = "Name: Bob, Email: bob@bob.com, Phone: 123456";
-
         assertEquals(expectedOutput, one.getAllUserInfo());
     }
+
+    @Test
+    public void testLoginWorks(){
+        String username = "123-4567";
+        String password = "thoughtworks";
+        assertTrue(accounts.checkLoginSuccessful(username, password)); //test correct login
+        String fakeUser = "111-2222";
+        assertFalse(accounts.checkLoginSuccessful(fakeUser,password)); //test incorrect login
+    }
+
+
 
 
 

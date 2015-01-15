@@ -6,16 +6,11 @@ package com.twu.biblioteca;
 public class User {
 
     private final String name, email, phone;
-    private Login login;
 
     User(String name, String email, String phone){
         this.name = name;
         this.email = email;
         this.phone = phone;
-    }
-
-    public void addLoginDetails(Login login){
-        this.login = new Login(login.getLibNumber(), login.getPassword());
     }
 
     public String getName(){
@@ -30,9 +25,6 @@ public class User {
         return phone;
     }
 
-    public Login getLoginDetails(){
-        return login;
-    }
 
     public String getAllUserInfo(){
         return ("Name: " + name + ", Email: " + email + ", Phone: " + phone);
