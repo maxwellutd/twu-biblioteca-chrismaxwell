@@ -42,8 +42,16 @@ public class Library {
         return lib;
     }
 
+    public List<Movie> getListOfMovies(){
+        return movieLib;
+    }
+
     public int getLibSize(){
         return lib.size();
+    }
+
+    public int getMovieLibSize() {
+        return movieLib.size();
     }
 
     public void checkOutBook(int position) {

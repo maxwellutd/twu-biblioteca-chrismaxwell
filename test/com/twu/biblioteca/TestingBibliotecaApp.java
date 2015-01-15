@@ -9,6 +9,7 @@ public class TestingBibliotecaApp{
     //set up mock data for books/library
     private static Library mockLib;
     private static Book one,two,three,four;
+    private static Movie mone, mtwo, mthree, mfour;
 
     @Before
     public void setUp() {
@@ -18,10 +19,19 @@ public class TestingBibliotecaApp{
         two = new Book("SECOND BOOK", "Bob B",2000);
         three = new Book ("THIRD BOOK", "Chris C",1900);
         four = new Book ("FOURTH BOOK", "Daniel D",2012);
+        mone = new Movie("MOVIE ONE", "1999", "ANDY A", 6);
+        mtwo = new Movie("MOVIE TWO", "2012", "BENNY B", 9);
+        mthree = new Movie("MOVIE THREE", "1934", "CANDY C", 1);
+        mfour = new Movie("MOVIE FOUR", "2005", "DEREK D", 7);
         mockLib.addBook(one);
         mockLib.addBook(two);
         mockLib.addBook(three);
         mockLib.addBook(four);
+        mockLib.addMovie(mone);
+        mockLib.addMovie(mtwo);
+        mockLib.addMovie(mthree);
+        mockLib.addMovie(mfour);
+
     }
 
 
