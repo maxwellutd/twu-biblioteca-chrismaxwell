@@ -9,16 +9,14 @@ import java.util.*;
 public class Library {
 
     private List<Book> lib;
-    private List<Book> borrowedList;
     private List<Movie> movieLib;
     private HashMap<Movie, String> borrowedMovieList;
     private HashMap<Book, String> borrowedBookList;
-    private String username = "";
+
 
     public Library(){
         this.lib = new ArrayList<Book>();
         this.movieLib = new ArrayList<Movie>();
-        this.borrowedList = new ArrayList<Book>();
         this.borrowedBookList = new HashMap<Book,String>();
         this.borrowedMovieList = new HashMap<Movie, String>();
     }
@@ -86,12 +84,13 @@ public class Library {
 
     public Boolean returnBook(String title) {
 
-        for(int i=0; i < borrowedList.size(); i++){
-            if(borrowedList.get(i).getTitle().equals(title)){
-                lib.add(borrowedList.remove(i));
-                return true;
+        for(Book key : borrowedBookList.keySet()){
+            if(key.getTitle().equals(title)){
+                borrowedBookList.remove(key);
+                lib.add(key);
             }
         }
+
         return false;
     }
 
