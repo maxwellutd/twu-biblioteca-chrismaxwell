@@ -11,6 +11,10 @@ public class TestingUserAccount {
 
     private String name, email, phone, password, libNumber;
     private User one;
+    private Library mockLib;
+    private Book bone, btwo;
+    private Movie mone, mtwo;
+
 
     private Accounts accounts;
 
@@ -25,6 +29,16 @@ public class TestingUserAccount {
         accounts = new Accounts();
         accounts.addLoginDetails(libNumber,password);
         accounts.addUser(libNumber,one);
+
+        mockLib = new Library();
+        bone = new Book("FIRST BOOK", "Andrew A", 1999);
+        btwo = new Book("SECOND BOOK", "Bob B",2000);
+        mone = new Movie("MOVIE ONE", "1999", "ANDY A", 6);
+        mtwo = new Movie("MOVIE TWO", "2012", "BENNY B", 9);
+        mockLib.addBook(bone);
+        mockLib.addBook(btwo);
+        mockLib.addMovie(mone);
+        mockLib.addMovie(mtwo);
 
 
     }
@@ -67,7 +81,12 @@ public class TestingUserAccount {
         assertFalse(accounts.checkLoginSuccessful(fakeUser,password)); //test incorrect login
     }
 
-
+    @Test
+    public void testBorrowingWithAccount(){
+        mockLib.checkOutBook(0,"123-4567");
+        assertEquals("123-4567", mockLib.getUserWhoBorrowedBook("FIRST BOOK"));
+        assertEquals("Bob", accounts.getUser(mockLib.getUserWhoBorrowedBook("FIRST BOOK")).getName());
+    }
 
 
 

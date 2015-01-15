@@ -64,13 +64,13 @@ public class TestingBibliotecaApp{
     @Test
     public void testCheckOutBook(){
         assertEquals(mockLib.getBookAt(2),three);
-        mockLib.checkOutBook(2);
+        mockLib.checkOutBook(2,"123-4567");
         assertEquals(mockLib.getBookAt(2),four);
     }
 
     @Test
     public void testReturnBook(){
-        mockLib.checkOutBook(2);
+        mockLib.checkOutBook(2,"123-4567");
         assertEquals(3,mockLib.getLibSize());
         mockLib.returnBook("THIRD BOOK");
         assertEquals(4, mockLib.getLibSize());
