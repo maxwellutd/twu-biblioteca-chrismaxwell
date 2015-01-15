@@ -152,7 +152,7 @@ public class BibliotecaApp{
             System.out.println("That movie is not available");
         }
         else{
-            library.checkOutMovie((selection - 1));
+            library.checkOutMovie((selection - 1),loggedInUser);
             System.out.println("Thank you, enjoy the movie!");
         }
     }

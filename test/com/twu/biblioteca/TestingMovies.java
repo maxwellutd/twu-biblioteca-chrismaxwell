@@ -30,7 +30,7 @@ public class TestingMovies {
         Library lib = new Library();
         Movie one = new Movie("Movie One", "2000", "Aaron A", 8);
         lib.addMovie(one);
-        lib.checkOutMovie(0);
+        lib.checkOutMovie(0,"123-4567");
 
         assertFalse(lib.hasMovie(one));
     }
@@ -40,7 +40,7 @@ public class TestingMovies {
         Library lib = new Library();
         Movie one = new Movie("Movie One", "2000", "Aaron A", 8);
         lib.addMovie(one);
-        lib.checkOutMovie(0);
+        lib.checkOutMovie(0,"123-4567");
         lib.returnMovie("Movie One");
 
         assertTrue(lib.hasMovie(one));

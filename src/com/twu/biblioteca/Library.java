@@ -11,7 +11,7 @@ public class Library {
     private List<Book> lib;
     private List<Book> borrowedList;
     private List<Movie> movieLib;
-    private List<Movie> borrowedMovieList;
+    private HashMap<Movie, String> borrowedMovieList;
     private HashMap<Book, String> borrowedBookList;
     private String username = "";
 
@@ -20,13 +20,8 @@ public class Library {
         this.movieLib = new ArrayList<Movie>();
         this.borrowedList = new ArrayList<Book>();
         this.borrowedBookList = new HashMap<Book,String>();
-        this.borrowedMovieList = new ArrayList<Movie>();
+        this.borrowedMovieList = new HashMap<Movie, String>();
     }
-
-    public void setLoggedInUser(String username){
-
-    }
-
 
     public void addBook(Book book){
         this.lib.add(book);
@@ -66,18 +61,27 @@ public class Library {
         borrowedBookList.put(borrowed,username);
     }
 
-    public void checkOutMovie(int position) {
-        borrowedMovieList.add(movieLib.remove(position));
+    public void checkOutMovie(int position, String username) {
+        Movie borrowed = movieLib.remove(position);
+        borrowedMovieList.put(borrowed, username);
     }
 
     public String getUserWhoBorrowedBook(String title){
-        Set<Book> books = borrowedBookList.keySet();
         for(Book key : borrowedBookList.keySet()){
             if(key.getTitle().equals(title)){
                 return (borrowedBookList.get(key));
             }
         }
         return "borrowed book not assigned";
+    }
+
+    public String getUserWhoBorrowedMovie(String title){
+        for(Movie key : borrowedMovieList.keySet()){
+            if(key.getMovieTitle().equals(title)){
+                return (borrowedMovieList.get(key));
+            }
+        }
+        return "borrowed movie not assigned";
     }
 
     public Boolean returnBook(String title) {
@@ -92,12 +96,14 @@ public class Library {
     }
 
     public Boolean returnMovie(String title){
-        for(int index=0; index < borrowedMovieList.size(); index++){
-            if(borrowedMovieList.get(index).getMovieTitle().equals(title)){
-                movieLib.add(borrowedMovieList.remove(index));
-                return true;
+
+        for(Movie key : borrowedMovieList.keySet()){
+            if(key.getMovieTitle().equals(title)){
+                borrowedMovieList.remove(key);
+                movieLib.add(key);
             }
         }
+
         return false;
     }
 

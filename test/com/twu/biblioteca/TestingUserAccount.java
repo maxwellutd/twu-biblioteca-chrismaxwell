@@ -88,6 +88,16 @@ public class TestingUserAccount {
         assertEquals("Bob", accounts.getUser(mockLib.getUserWhoBorrowedBook("FIRST BOOK")).getName());
     }
 
+    @Test
+    public void testIfBorrowingBookAndMovieAssignsUser(){
+        mockLib.checkOutBook(0,"123-4567");
+        mockLib.checkOutMovie(1,"123-4567");
+
+        assertEquals("Bob", accounts.getUser(mockLib.getUserWhoBorrowedMovie("MOVIE TWO")).getName());
+        assertEquals("Bob", accounts.getUser(mockLib.getUserWhoBorrowedBook("FIRST BOOK")).getName());
+
+    }
+
 
 
 
